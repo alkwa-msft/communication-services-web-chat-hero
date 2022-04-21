@@ -14,7 +14,7 @@
     },
     "packageUrl": {
       "type": "string",
-      "defaultValue": "https://github.com/Azure-Samples/communication-services-web-chat-hero/releases/latest/download/group-chat.zip"
+      "defaultValue": "https://github.com/alkwa-msft/communication-services-web-chat-hero/releases/latest/download/group-chat.zip"
     }
   },
   "variables": {
@@ -68,7 +68,7 @@
           "properties": {
             "ResourceConnectionString": "[listkeys(variables('commsName'), '2020-08-20-preview' ).primaryConnectionString]",
             "Test": "[indexOf(listkeys(variables('commsName'), '2020-08-20-preview' ).primaryConnectionString, '.azure.com/') + 1)]",
-            "EndpointUrl": "[substring(listkeys(variables('commsName'), '2020-08-20-preview' ).primaryConnectionString, 9, indexOf(listkeys(variables('commsName'), '2020-08-20-preview' ).primaryConnectionString, '.azure.com/') + 1)]",
+            "EndpointUrl": "[substring(listkeys(variables('commsName'), '2020-08-20-preview' ).primaryConnectionString, 9, 10)]",
             "WEBSITE_NODE_DEFAULT_VERSION": "~14"
           }
         },
