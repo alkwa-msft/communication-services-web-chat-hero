@@ -67,7 +67,7 @@
           },
           "properties": {
             "ResourceConnectionString": "[listkeys(variables('commsName'), '2020-08-20-preview' ).primaryConnectionString]",
-            "EndpointUrl": "[substring(listkeys(variables('commsName'), '2020-08-20-preview' ).primaryConnectionString, 9, indexOf(listkeys(variables('commsName'), '2020-08-20-preview' ).primaryConnectionString, '.com/'))]",
+            "EndpointUrl": "[substring(listkeys(variables('commsName'), '2020-08-20-preview' ).primaryConnectionString, 9, indexOf(listkeys(variables('commsName'), '2020-08-20-preview' ).primaryConnectionString, '.azure.com/') + 11)]",
             "WEBSITE_NODE_DEFAULT_VERSION": "~14"
           }
         },
